@@ -1,17 +1,15 @@
 pipeline {
     agent any
     stages{
-        stage('build'){
+        stage('clone'){
             steps {
-                sh 'mvn clean install'
+                bat 'clone.bat'
             }
         }
-    }
-    post {
-        always {
-            mail to :"recipient@company.com",
-                subject: "New build report: ${currentBuild.fullDisplayName}",
-                body:"Check out status at ${env.BUILD_URL}"
+        stage('build'){
+            steps {
+                bat 'build.bat
+            }
         }
     }
 }
