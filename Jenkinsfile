@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build'){
             steps {
-                bat 'build.bat
+                bat 'build.bat'
             }
         }
         stage('test'){
