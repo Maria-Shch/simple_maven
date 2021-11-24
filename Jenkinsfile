@@ -7,10 +7,10 @@ pipeline {
                 sh 'git --version'
             }
         }
-        stage('build'){
-            steps {
-                sh 'mvn --version'
-            }
-        }
+        // stage('build'){
+        //     steps {
+        //         sh 'mvn --version'
+        //     }
+        // }
     }
 }
