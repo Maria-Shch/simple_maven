@@ -1,15 +1,19 @@
 pipeline {
     agent any
-    // agent { docker { image 'maven:3.8.4' } }
     stages{
-        // stage('git'){
-        //     steps {
-        //         sh 'git --version'
-        //     }
-        // }
+        stage('clone'){
+            steps {
+                bat 'clone.bat'
+            }
+        }
         stage('build'){
             steps {
-                sh 'mvn --version'
+                bat 'build.bat'
+            }
+        }
+        stage('test'){
+            steps {
+                bat 'test.bat'
             }
         }
     }
