@@ -3,7 +3,7 @@ pipeline {
     stages{
         stage('git'){
             steps {
-                sh 'git --version'
+                bat 'git.bat'
             }
         }
         stage('clone'){
