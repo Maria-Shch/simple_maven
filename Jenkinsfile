@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages{
-        stage('git'){
-            steps {
-                bat 'git.bat'
-            }
-        }
+        // stage('git'){
+        //     steps {
+        //         bat 'git.bat'
+        //     }
+        // }
         stage('clone'){
             steps {
                 bat 'clone.bat'
