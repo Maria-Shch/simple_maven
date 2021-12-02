@@ -18,12 +18,12 @@ pipeline {
         }
         stage('archive'){
             steps {
-                
+                bat 'clone.bat'
             }
         }
         stage('Deploy'){
             steps{
-                
+                bat 'clone.bat'
             }
         }
     }
